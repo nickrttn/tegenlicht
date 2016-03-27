@@ -31,6 +31,12 @@ body {
 }
 
 [role=banner] {
+  background: #000;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
   h1 {
     @include hide-text;
     margin: 0;
@@ -118,7 +124,9 @@ footer {
 
 @media screen and (min-width: 40em) {
   main,
-  footer {
+  footer,
+  .current-show,
+  .finished-show {
     padding-left: 10vw;
   }
 }
