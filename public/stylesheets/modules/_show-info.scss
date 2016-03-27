@@ -49,13 +49,13 @@
 
 .next-show__title {
   background: $black;
-  color: white;
   flex: 1 1 auto;
   padding-left: .5em;
 }
 
 .next-show__title h1,
 .next-show__title p {
+  color: $white;
   margin: 0;
 }
 
