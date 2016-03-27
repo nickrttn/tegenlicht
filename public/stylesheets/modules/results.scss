@@ -1,0 +1,35 @@
+.results {}
+
+.results__poll-item {}
+
+.results__chart {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 0.5em;
+}
+
+.results__percentage {
+  font-family: 'Brandon Grotesque';
+  flex: 0 1 15%;
+  line-height: 2.5rem;
+  text-align: right;
+  padding-right: .5em;
+}
+
+.results__bar {
+  background: linear-gradient(90deg, $grey 0%, $white 0%, $white 100%);
+  color: $darkgrey;
+  flex: 1 4 auto;
+  height: 2.5rem;
+  padding-left: .5em;
+  transition: background 600ms ease-out;
+}
+
+.results__bar-text {
+  font-size: modular-scale(-1);
+  line-height: 2.5rem;
+}
+
+.results__bar-text.chosen {
+  color: $orange;
+}

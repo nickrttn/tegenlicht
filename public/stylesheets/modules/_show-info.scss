@@ -1,0 +1,72 @@
+.next-show,
+.current-show,
+.finished-show {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.next-show__type,
+.current-show__type,
+.finished-show__type {
+  color: $orange;
+  flex: 0 1 100%;
+  font-family: 'Brandon Grotesque';
+  font-weight: 500;
+  margin: .25em 0;
+  padding-left: .25em;
+}
+
+.next-show__calendar {
+  background: $orange;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'Brandon Grotesque';
+  padding: .3em .75em .4em;
+}
+
+.next-show__calendar-date {
+  background: $white;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: .25em .2em;
+  text-align: center;
+}
+
+.next-show__calendar-day {
+  background: $orange;
+  color: $white;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin: 0;
+  padding: .1em .25em;
+}
+
+.next-show__calendar-month {
+  color: $orange;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.next-show__title {
+  background: $black;
+  color: white;
+  flex: 1 1 auto;
+  padding-left: .5em;
+}
+
+.next-show__title h1,
+.next-show__title p {
+  margin: 0;
+}
+
+.next-show__title h1 {
+  line-height: 1.2;
+  font-size: em(20px);
+  margin-top: 1.1em;
+}
+
+.next-show__title p {
+  font-family: 'Brandon Grotesque';
+  font-weight: 500;
+  margin: 0 0 .25em;
+}

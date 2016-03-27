@@ -1,0 +1,123 @@
+@import 'normalize';
+@import 'bourbon';
+
+@include font-face('Brandon Grotesque', '../../fonts/Brandon_med', 500, $file-formats: woff);
+@include font-face('Brandon Grotesque', '../../fonts/Brandon_bld', 700, $file-formats: woff);
+@include font-face('Brandon Grotesque', '../../fonts/Brandon_blk', 800, $file-formats: woff);
+
+$black: #231f20;
+$white: #fff;
+$orange: #f15a29;
+$grey: #e6e6e6;
+$darkgrey: #b1b1b1;
+$twitter: #55acee;
+$modular-scale: $golden;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  @include font-feature-settings('liga' ,'kern');
+}
+
+[role=banner] {
+  h1 {
+    @include hide-text;
+    margin: 0;
+    font: 0/0 a;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Brandon Grotesque';
+  font-weight: 800;
+  margin-bottom: .5em;
+  margin-top: 0;
+  @include font-feature-settings('liga', 'kern');
+}
+
+h1 {
+  font-size: modular-scale(3);
+  color: $black;
+}
+
+h2 {
+  color: $black;
+  font-size: modular-scale(2);
+}
+
+h3 {
+  color: $orange;
+  font-size: modular-scale(1);
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: $orange;
+  @include transition(all 200ms);
+
+  &:hover {
+    color: darken($orange, 10%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.lead {
+  font-family: 'Brandon Grotesque';
+  font-size: em(18px);
+  font-weight: 500;
+  margin-top: .5em;
+  text-align: right;
+  @include font-feature-settings('liga', 'kern');
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  max-width: 35em;
+  padding: 0 .25em;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+@import 'modules/utility';
+@import 'modules/buttons';
+@import 'modules/show-info';
+@import 'modules/pre-questions';
+@import 'modules/timer';
+@import 'modules/results';
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 .25em;
+}
+
+@import 'modules/social';
+
+@media screen and (min-width: 40em) {
+  main,
+  footer {
+    padding-left: 10vw;
+  }
+}

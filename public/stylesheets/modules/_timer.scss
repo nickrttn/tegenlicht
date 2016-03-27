@@ -1,0 +1,45 @@
+.timer {
+  position: relative;
+}
+
+.timer__duration {
+  display: block;
+  font-family: 'Brandon Grotesque';
+  float: right;
+}
+
+.timer__time-elapsed {
+  font-family: 'Brandon Grotesque';
+}
+
+.timer__total {
+  position: absolute;
+  background: $darkgrey;
+  display: block;
+  height: .35em;
+  width: 100%;
+  z-index: 0;
+}
+
+.timer__elapsed {
+  position: absolute;
+  background: $orange;
+  display: block;
+  height: .35em;
+  width: calc((0 / 2793000) * 100%);
+  z-index: 700;
+}
+
+.timer__marker {
+  background: $black;
+  display: block;
+  height: .35em;
+  left: calc(( attr(data-time) / attr(data-total)) * 100%);
+  position: absolute;
+  width: .25em;
+  z-index: 999;
+}
+
+.timer__explanation {
+  @extend .explanation;
+}

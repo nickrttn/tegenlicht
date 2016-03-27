@@ -1,0 +1,27 @@
+<% include application/head %>
+
+  <% include modules/header %>
+  <% include modules/current-show %>
+
+  <main>
+    <h2>Halte: Istanbul</h2>
+
+    <p>Hieronder verschijnen tijdens de uitzending de polls. U hoeft hier niets voor te doen.</p>
+
+    <h3>Polls <span class="poll-item__timer"></span></h3>
+
+    <% include modules/timer %>
+
+    <div class="poll-item notice">
+        <p class="poll-item__watch-notice">Hou een oogje op deze ruimte <span class="prototype__notice">In dit prototype kun je hier klikken om de timer te starten.</span></p>
+    </div>
+
+    <% include poll-items %>
+
+    <%# PROTOTYPING BUTTONS %>
+    <% include modules/proto %>
+
+  </main>
+
+<% include modules/social %>
+<% include application/foot %>

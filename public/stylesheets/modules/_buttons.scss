@@ -1,0 +1,68 @@
+a.button {
+  text-decoration: none;
+  color: $black;
+}
+
+.button {
+  @include appearance(none);
+  background: $grey;
+  border: 0;
+  display: inline-block;
+  font-family: 'Brandon Grotesque';
+  font-weight: 500;
+  margin: .75em 0;
+  padding: .5em 3em;
+  @include transition(all 200ms);
+
+  &:hover {
+    background: darken($grey, 15%);
+  }
+}
+
+main .button {
+  align-self: center;
+}
+
+.button.primary {
+  background: $orange;
+  color: white;
+
+  &:hover {
+    background: darken($orange, 15%);
+  }
+}
+
+.button:disabled,
+.button.primary:disabled {
+  background: darken($grey, 12%);
+  color: $white;
+  cursor: not-allowed;
+
+  &::hover {
+    background: darken($grey, 12%);
+    cursor: not-allowed;
+  }
+}
+
+.button.twitter {
+  background: $twitter;
+  border-radius: .25em;
+  color: $white;
+  display: block;
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+    background: darken($twitter, 15%);
+  }
+}
+
+.button .icon {
+  fill: $white;
+  vertical-align: middle;
+}
+
+.twitter__explanation {
+  @extend .explanation;
+}

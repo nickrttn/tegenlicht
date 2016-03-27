@@ -1,0 +1,91 @@
+.pre-questions {
+
+}
+
+.poll-item {
+  margin-top: 1.5em;
+}
+
+.poll-item__watch-notice {
+  background: transparentize($orange, .85);
+  color: $orange;
+  display: block;
+  font-family: 'Brandon Grotesque';
+  font-size: modular-scale(1);
+  padding: 4em 0;
+  text-align: center;
+}
+
+.pre-questions__list {
+  font-size: modular-scale(3);
+  padding-left: 1em;
+  color: $grey;
+}
+
+.pre-questions__list-item {
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+.pre-questions__radio-set,
+.poll-questions__radio-set {
+  border: 0;
+  padding: 0;
+  position: relative;
+  top: -1rem;
+
+  legend {
+    color: $black;
+    font-family: 'Brandon Grotesque';
+    font-size: 1rem;
+    @include font-feature-settings('liga', 'kern');
+  }
+}
+
+.pre-questions__radio-item,
+.poll-questions__radio-item {
+  color: $black;
+  font-size: 1rem;
+  margin: .5em 0;
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label {
+    border: 2px solid $orange;
+    color: $orange;
+    display: block;
+    padding: .25em;
+    text-align: center;
+    border-radius: .25em;
+
+    &:hover {
+      background: transparentize($orange, .85);
+    }
+  }
+
+  input[type=radio]:checked + label {
+    background: $orange;
+    color: $white;
+  }
+
+  input[type=radio]:disabled + label {
+    background: $white;
+    border: 2px solid $darkgrey;
+    color: $darkgrey;
+  }
+
+  input[type=radio]:checked:disabled + label {
+    background: $darkgrey;
+    border: 2px solid $darkgrey;
+    color: $white;
+  }
+}
+
+.pre-questions__submit {
+  @include appearance(none);
+
+  float: right;
+  font-size: 1rem;
+}

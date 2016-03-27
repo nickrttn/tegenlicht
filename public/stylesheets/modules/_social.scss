@@ -1,0 +1,27 @@
+.social {
+  margin: 1.5em 0;
+  max-width: 35em;
+}
+
+.social__title {
+  color: $black;
+  margin-bottom: .25em;
+}
+
+.social__links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.social__links-item {
+  color: $orange;
+  font-family: 'Brandon Grotesque';
+  text-decoration: none;
+  @include font-feature-settings('liga' ,'kern');
+  @include transition(all 200ms);
+
+  &:hover {
+    color: darken($orange, 10%)
+  }
+}
