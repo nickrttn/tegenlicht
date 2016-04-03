@@ -1,17 +1,26 @@
 <% include application/head %>
 
-  <% include modules/header %>
-  <% include modules/finished-show %>
+  <header role="banner">
+    <h1 class="banner__title"><%= title %></h1>
+    <% include modules/finished-show %>
+  </header>
 
   <main>
     <h2>Halte: Istanbul</h2>
     <p class="lead">Heeft u wel genoeg gehoord?</p>
     <p>Ga in discussie met uw familie of netwerk. Hierbij alvast een gespreksstarter of twee.</p>
+
     <h3>Gespreksstarters</h3>
+
+    <h4>Stelling 1</h4>
     <p>Met de steeds dichterbij komende toelating van Turkije in de EU is de kans groot dat het land er beter op wordt. Wordt de kans dan ook groter dat Turkije een goede toekomst biedt voor Syrische vluchtelingen?</p>
+
+    <h4>Stelling 2</h4>
     <p>Is de steeds toenemende vernauwing van sociale en persoonlijke rechten in Turkije iets dat u meegenomen hebt bij het nadenken over uw standpunt?</p>
+
     <p class="lead">Als uw familie of netwerk geen gehoor geeft kunt u altijd nog naar onze <a href="https://dezwijger.nl/programma/tegenlicht-70">wekelijkse meet up in Pakhuis de Zwijger</a> komen. </p>
   </main>
 
-<% include modules/social %>
+  <% include modules/aside %>
+
 <% include application/foot %>

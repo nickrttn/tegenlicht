@@ -5,22 +5,22 @@ a.button {
 
 .button {
   @include appearance(none);
-  background: $grey;
+  background: $darkgrey;
   border: 0;
   display: inline-block;
   font-family: 'Brandon Grotesque';
-  font-weight: 500;
+  font-weight: 400;
   margin: .75em 0;
   padding: .5em 3em;
   @include transition(all 200ms);
 
   &:hover {
-    background: darken($grey, 15%);
+    background: darken($darkgrey, 15%);
   }
 }
 
 main .button {
-  align-self: center;
+  align-self: flex-start;
 }
 
 .button.primary {

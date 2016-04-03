@@ -1,22 +1,23 @@
 <% include application/head %>
 
-  <% include modules/header %>
-  <% include modules/next-show %>
-
-  <div class="video">
-    <iframe src="//www.youtube.com/embed/OQV3l9fklCk" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <header role="banner">
+    <h1 class="banner__title"><%= title %></h1>
+    <% include modules/next-show %>
+  </header>
 
   <main>
-    <p class="lead">Vele vluchtelingen weten naar Istanbul te trekken: de poort naar Europa. Blijven ze of is de oversteek naar Europa te aantrekkelijk?</p>
+    <div class="video">
+      <iframe src="//www.youtube.com/embed/OQV3l9fklCk" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <p class="lead">“Vele vluchtelingen weten naar Istanbul te trekken: de poort naar Europa. Blijven ze of is de oversteek naar Europa te aantrekkelijk?”</p>
     <p>Met een verwoest en door burgeroorlog geteisterd Syrië aan de zuidgrens, houdt Turkije in ruil voor miljarden euro’s van de Europese Unie de grenzen dicht. Vele Syriërs, Irakezen en Afghanen weten toch door de poreuze grenzen heen te komen en trekken naar Istanbul: de poort tot Europa. <a href="http://tegenlicht.vpro.nl/afleveringen/2015-2016/halte-istanbul.html">Blijven ze of is de oversteek naar Europa té aantrekkelijk?</a></p>
 
-    <h2>Beantwoord deze vragen voor de uitzending begint</h2>
-    <p>Zo maakt u expliciet wat u over het onderwerp denkt.</p>
+    <h2>Beantwoord deze vragen voor de uitzending</h2>
 
     <% include modules/pre-questions %>
-
   </main>
 
-<% include modules/social %>
+  <% include modules/aside %>
+
 <% include application/foot %>

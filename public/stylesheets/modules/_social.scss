@@ -1,6 +1,9 @@
 .social {
-  margin: 1.5em 0;
-  max-width: 35em;
+  background: $grey;
+  border-top: .5em solid $black;
+  flex: 0 1 auto;
+  margin: 2em 0;
+  padding: 1em;
 }
 
 .social__title {
@@ -11,17 +14,22 @@
 .social__links {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .social__links-item {
   color: $orange;
   font-family: 'Brandon Grotesque';
+  padding-left: 1em;
   text-decoration: none;
   @include font-feature-settings('liga' ,'kern');
   @include transition(all 200ms);
 
   &:hover {
     color: darken($orange, 10%)
+  }
+
+  &:first-of-type {
+    padding-left: 0;
   }
 }

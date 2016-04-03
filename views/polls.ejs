@@ -1,7 +1,9 @@
 <% include application/head %>
 
-  <% include modules/header %>
-  <% include modules/current-show %>
+  <header role="banner">
+    <h1 class="banner__title"><%= title %></h1>
+    <% include modules/current-show %>
+  </header>
 
   <main>
     <h2>Halte: Istanbul</h2>
@@ -18,10 +20,11 @@
 
     <% include poll-items %>
 
-    <%# PROTOTYPING BUTTONS %>
-    <% include modules/proto %>
-
   </main>
 
-<% include modules/social %>
+  <% include modules/aside %>
+
+  <%# PROTOTYPING BUTTONS %>
+  <% include modules/proto %>
+
 <% include application/foot %>

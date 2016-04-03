@@ -1,7 +1,3 @@
-.pre-questions {
-
-}
-
 .poll-item {
   margin-top: 1.5em;
 }
@@ -12,19 +8,25 @@
   display: block;
   font-family: 'Brandon Grotesque';
   font-size: modular-scale(1);
+  font-weight: 400;
+  margin-bottom: 0;
   padding: 4em 0;
   text-align: center;
 }
 
 .pre-questions__list {
   font-size: modular-scale(3);
+  margin-top: 0;
   padding-left: 1em;
-  color: $grey;
+  color: $darkgrey;
 }
 
 .pre-questions__list-item {
-  margin-top: .5em;
-  margin-bottom: 0;
+  margin: 2rem 0;
+
+  &:last-of-type {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .pre-questions__radio-set,
@@ -37,7 +39,9 @@
   legend {
     color: $black;
     font-family: 'Brandon Grotesque';
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
     @include font-feature-settings('liga', 'kern');
   }
 }
@@ -81,6 +85,10 @@
     border: 2px solid $darkgrey;
     color: $white;
   }
+}
+
+.poll-questions__radio-item:last-of-type {
+  margin-bottom: 0;
 }
 
 .pre-questions__submit {

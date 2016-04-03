@@ -1,6 +1,12 @@
 .results {}
 
-.results__poll-item {}
+.results__poll-item {
+  margin: 1.5em 0 2em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
 
 .results__chart {
   display: flex;

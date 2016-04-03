@@ -1,7 +1,9 @@
 <% include application/head %>
 
-  <% include modules/header %>
-  <% include modules/next-show %>
+  <header role="banner">
+    <h1 class="banner__title"><%= title %></h1>
+    <% include modules/next-show %>
+  </header>
 
   <main>
     <h2>Schijn je licht op Tegenlicht</h2>
@@ -10,5 +12,6 @@
     <a href="/voor-uitzending" class="button primary">Begin nu</a>
   </main>
 
-<% include modules/social %>
+  <% include modules/aside %>
+
 <% include application/foot %>

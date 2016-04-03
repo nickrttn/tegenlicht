@@ -1,7 +1,9 @@
 <% include application/head %>
 
-  <% include modules/header %>
-  <% include modules/finished-show %>
+  <header role="banner">
+    <h1 class="banner__title"><%= title %></h1>
+    <% include modules/finished-show %>
+  </header>
 
   <main>
     <h2>Poll resultaten</h2>
@@ -10,5 +12,6 @@
     <a href="/gesprek" class="button primary">Ga verder</a>
   </main>
 
-<% include modules/social %>
+  <% include modules/aside %>
+
 <% include application/foot %>

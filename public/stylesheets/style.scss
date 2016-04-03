@@ -1,17 +1,19 @@
 @import 'normalize';
 @import 'bourbon';
 
+@include font-face('Brandon Grotesque', '../../fonts/brandon_light-webfont', 300, $file-formats: woff);
+@include font-face('Brandon Grotesque', '../../fonts/brandon_reg-webfont', 400, $file-formats: woff);
 @include font-face('Brandon Grotesque', '../../fonts/Brandon_med', 500, $file-formats: woff);
 @include font-face('Brandon Grotesque', '../../fonts/Brandon_bld', 700, $file-formats: woff);
-@include font-face('Brandon Grotesque', '../../fonts/Brandon_blk', 800, $file-formats: woff);
 
 $black: #231f20;
 $white: #fff;
 $orange: #f15a29;
-$grey: #e6e6e6;
+$grey: #eee;
 $darkgrey: #b1b1b1;
 $twitter: #55acee;
-$modular-scale: $golden;
+
+$modular-scale: $perfect-fourth;
 
 html {
   box-sizing: border-box;
@@ -24,29 +26,37 @@ html {
 }
 
 body {
+  align-items: flex-start;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  justify-content: space-between;
   @include font-feature-settings('liga' ,'kern');
 }
 
 [role=banner] {
-  background: #000;
+  align-items: center;
+  background: #000 url('../images/header.jpg') no-repeat left top;
+  background-size: contain;
+  display: flex;
+  flex: 0 1 100%;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 
   img {
     display: block;
     margin: 0 auto;
   }
-  h1 {
+  .banner__title {
     @include hide-text;
-    margin: 0;
     font: 0/0 a;
+    margin: 0;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Brandon Grotesque';
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: .5em;
   margin-top: 0;
   @include font-feature-settings('liga', 'kern');
@@ -60,12 +70,18 @@ h1 {
 h2 {
   color: $black;
   font-size: modular-scale(2);
-  margin-top: .5em;
 }
 
 h3 {
   color: $orange;
   font-size: modular-scale(1);
+  font-weight: 500;
+}
+
+h4 {
+  color: $black;
+  margin-bottom: .5em;
+  margin-top: 1em;
 }
 
 p {
@@ -88,23 +104,36 @@ img {
 
 .lead {
   font-family: 'Brandon Grotesque';
-  font-size: em(18px);
+  font-size: modular-scale(1);
   font-weight: 500;
-  margin-top: .5em;
+  margin: 1.5em 0;
   text-align: right;
   @include font-feature-settings('liga', 'kern');
+}
+
+.lead + p {
+  margin-bottom: 2em;
 }
 
 main {
   display: flex;
   flex-flow: column nowrap;
+  flex: 0 1 auto;
   justify-content: flex-start;
   max-width: 35em;
-  padding: 0 .25em;
+  padding: 2em 1em;
 
   p {
     margin-top: 0;
   }
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+
+  padding: 1em;
 }
 
 @import 'modules/utility';
@@ -113,20 +142,53 @@ main {
 @import 'modules/pre-questions';
 @import 'modules/timer';
 @import 'modules/results';
-
-footer {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 0 .25em;
-}
-
 @import 'modules/social';
 
-@media screen and (min-width: 40em) {
-  main,
-  footer,
-  .current-show,
-  .finished-show {
-    padding-left: 10vw;
+@media screen and (min-width: 31.5em) {
+  [role="banner"] {
+    background-size: contain;
+    background-position: left top;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  [role="banner"] {
+    min-height: calc(7.0875em + 3em);
+  }
+
+  main {
+    flex: 1 3 auto;
+
+    > * {
+      max-width: 35rem;
+    }
+  }
+}
+
+@media screen and (min-width: 60em) {
+  [role="banner"] {
+    background-position: 5em top;
+    padding-right: 1.5em;
+  }
+
+  main {
+    margin-left: 5em;
+  }
+
+  .sidebar {
+    padding-right: 1.5em;
+  }
+}
+
+@media screen and (min-width: 65em) {
+  [role="banner"],
+  .sidebar {
+    padding-right: 5em;
+  }
+}
+
+@media screen and (min-width: 68.88em) {
+  .sidebar {
+    justify-content: flex-end;
   }
 }

@@ -2,6 +2,22 @@
   display: none;
 }
 
+.prototype {
+  margin-top: 1.5em;
+  padding: 1em;
+  background: $grey;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  small {
+    color: crimson;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+}
+
 .prototype__notice {
   display: block;
   font-size: modular-scale(-1);
