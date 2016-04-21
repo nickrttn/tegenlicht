@@ -1,8 +1,7 @@
 'use strict';
 
+// This isn't jQuery, it's Lea Verou's Blissful.js
 $.ready(document).then(function() {
-
-  // ES6 IFFE's look friggin' spiffy motherfucker
 
   // make videos responsive
   fitvids();
